@@ -18,8 +18,8 @@ async function pegaArquivo(caminhoDoArquivo) {
   }
 }
 
-pegaArquivo('./arquivos/texto.md')
-pegaArquivo('./arquivos/')
+pegaArquivo("./arquivos/texto.md");
+pegaArquivo("./arquivos/");
 
 // PROMISES COM THEN()
 
@@ -31,3 +31,7 @@ pegaArquivo('./arquivos/')
 //   })
 //   .catch((erro) => trataErro(erro))
 // }
+
+
+
+//              \(https?:\/\/[^\s?#.].[^\s]*\)

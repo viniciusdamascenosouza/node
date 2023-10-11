@@ -1,11 +1,13 @@
 import fs from "fs";
 import chalk from "chalk";
 
+export default pegaArquivo;;
+
 function extraiLinks(texto) {
   const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;
   const capturas = [...texto.matchAll(regex)];
 
-  const resultados = capturas.map((captura) => ({ [captura[1]]: captura[2] }));
+  const resultados = capturas.map(captura => ({ [captura[1]]: captura[2] }));
   return resultados;
 }
 
@@ -15,7 +17,6 @@ function trataErro(erro) {
 }
 
 // async/await
-
 async function pegaArquivo(caminhoDoArquivo) {
   try {
     const encoding = "utf-8";
@@ -27,7 +28,6 @@ async function pegaArquivo(caminhoDoArquivo) {
   }
 }
 
-pegaArquivo("./arquivos/texto.md");
 
 // PROMISES COM THEN()
 

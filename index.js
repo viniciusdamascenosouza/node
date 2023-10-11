@@ -6,7 +6,7 @@ const textoTeste =
 
 function extraiLinks(texto) {
   const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;
-  const capturas = regex.exec(texto);
+  const capturas = [...texto.matchAll(regex)];
   console.log(capturas);
 }
 
